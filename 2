@@ -1,0 +1,8 @@
+<?php
+    $image = imagecreatefrompng('image.png');
+    $banner = imagecreatetruecolor(200, 100);
+
+    imagecopyresampled($banner, $image, 0, 0, 0, 5000, 200, 100, 20000, 10000);
+
+    header("Content-type: image/png");
+    imagepng($banner);
